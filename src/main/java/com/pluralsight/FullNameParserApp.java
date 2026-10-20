@@ -13,10 +13,21 @@ public class FullNameParserApp {
         System.out.println("Please enter your full name: ");
         String fullName = theScanner.nextLine().trim();
 
-        // * Split their full name into parts
+        // * Split their full name into separate parts
         String[] nameParts = fullName.split(" ");
 
-        System.out.println(nameParts[0]);
+        // * Desired format if they gave us all pieces:
+        // First name: Dana
+        // Middle name: L.
+        // Last name: Wyatt
+        System.out.println("First Name: "  + nameParts[0]);
+        System.out.println("Last Name: "  + nameParts[1]);
+        System.out.println("Middle Name: "  + nameParts[2]);
+
+        // * Format if they didn't give us all the pieces:
+        // First name: Dana
+        // Middle name: (none)
+        // Last name: Wyatt
 
     } // ! main method closing bracket
 
